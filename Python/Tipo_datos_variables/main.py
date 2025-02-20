@@ -44,7 +44,6 @@ dicccionario = {
 # Suma y Resta
 suma = 5 + 5
 
-
 resta = 5 - 5
 
 # Multiplicacion y Division
@@ -53,9 +52,17 @@ multiplicacion = 5 * 5
 
 division = 5 / 5
 
+division_exacta = 5 // 5
+
 # Resto
 
 resto = 5 % 5
+
+# Potencia
+
+potencia = 5 ** 5 # 5^5 ----> 5 * 5 * 5 * 5 * 5
+
+
 
 
 
@@ -65,15 +72,19 @@ resto = 5 % 5
 
 igualdad = 5 == 5
 
-
 distinto = 5 != 6
 
-mayor = 5 > 6
+mayor = 7 > 6
 
 menor = 5 < 6
 
-mayor_igual = 5 >= 5
+mayor_igual = 7 >= 5
 
 menor_igual = 5 <= 6
 
+
+
+# metodo range
+
+rango = range(0, 10) 
 
