@@ -37,3 +37,14 @@ print(foo(16))
 print(foo(25))
 print(foo(26))
 print(foo(5))    
+
+
+
+
+#Input 
+
+
+def pedir_nombre(name):
+    return f"Hola {name}"
+
+print(pedir_nombre(input("Dime tu nombre: ")))
