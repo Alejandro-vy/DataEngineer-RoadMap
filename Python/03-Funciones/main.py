@@ -48,3 +48,21 @@ def pedir_nombre(name):
     return f"Hola {name}"
 
 print(pedir_nombre(input("Dime tu nombre: ")))
+
+
+
+
+# funciones con dos parametros
+
+def sumar(a, b):
+    return a + b
+
+print(sumar(5, 5))
+
+
+# funcion arbitraria de parametros
+
+def mean(*args):
+    return sum(args) / len(args)
+
+print(mean(1, 2, 3, 4, 5))

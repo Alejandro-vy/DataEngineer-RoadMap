@@ -24,3 +24,18 @@ usuario = ""
 
 while usuario != "salir":
     usuario = input("Ingrese el usuario prohibido para salir: ") 
+    
+
+
+
+# List comprehension
+
+
+temperatures = [212, 123, 432, 333]
+
+new_temperatures = [temperature / 10 for temperature in temperatures] # Esto es equivalente a un for loop pero nos ahorra cod.
+
+
+print(new_temperatures)    
+    
+    
