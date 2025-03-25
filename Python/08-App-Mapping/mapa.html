@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_aac7dd952c426f31dce2a6ecb205a529 {
+                #map_31eeb2322baaf61d1cdd6b27617ffc3a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_aac7dd952c426f31dce2a6ecb205a529" ></div>
+            <div class="folium-map" id="map_31eeb2322baaf61d1cdd6b27617ffc3a" ></div>
         
 </body>
 <script>
     
     
-            var map_aac7dd952c426f31dce2a6ecb205a529 = L.map(
-                "map_aac7dd952c426f31dce2a6ecb205a529",
+            var map_31eeb2322baaf61d1cdd6b27617ffc3a = L.map(
+                "map_31eeb2322baaf61d1cdd6b27617ffc3a",
                 {
                     center: [-41.46067771036199, -72.95166123635632],
                     crs: L.CRS.EPSG3857,
@@ -63,7 +63,7 @@
 
         
     
-            var tile_layer_da30601da89aedb72208b217d7b25dba = L.tileLayer(
+            var tile_layer_9d889eac4ad0f3111064ff45e5af9138 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -80,7 +80,65 @@
             );
         
     
-            tile_layer_da30601da89aedb72208b217d7b25dba.addTo(map_aac7dd952c426f31dce2a6ecb205a529);
+            tile_layer_9d889eac4ad0f3111064ff45e5af9138.addTo(map_31eeb2322baaf61d1cdd6b27617ffc3a);
         
+    
+            var tile_layer_12d39e6d54a7f602fd32265c1af1d475 = L.tileLayer(
+                "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Map tiles by Stamen Design, CC BY 3.0 \u2014 Map data \u00a9 OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_12d39e6d54a7f602fd32265c1af1d475.addTo(map_31eeb2322baaf61d1cdd6b27617ffc3a);
+        
+    
+            var marker_6be330f91c03ea17d99923aa88075b4d = L.marker(
+                [-41.46067771036199, -72.95166123635632],
+                {
+}
+            ).addTo(map_31eeb2322baaf61d1cdd6b27617ffc3a);
+        
+    
+            var icon_46e829cd05744753a3e36c42c5850264 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5a689181f6da8c3334ef6096285f763 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bda0eaec3aa0ca765340c5128737143 = $(`<div id="html_5bda0eaec3aa0ca765340c5128737143" style="width: 100.0%; height: 100.0%;">Casa de la Cultura</div>`)[0];
+                popup_c5a689181f6da8c3334ef6096285f763.setContent(html_5bda0eaec3aa0ca765340c5128737143);
+            
+        
+
+        marker_6be330f91c03ea17d99923aa88075b4d.bindPopup(popup_c5a689181f6da8c3334ef6096285f763)
+        ;
+
+        
+    
+    
+                marker_6be330f91c03ea17d99923aa88075b4d.setIcon(icon_46e829cd05744753a3e36c42c5850264);
+            
 </script>
 </html>
