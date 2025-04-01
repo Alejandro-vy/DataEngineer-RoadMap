@@ -10,11 +10,12 @@ lat = list(data["LAT"])
 
 lon = list(data["LON"])
 
+elev = list(data["ELEV"])
+
 # Crear un mapa centrado en las coordenadas proporcionadas
 mapa = folium.Map(location=[38.58, -99.09], zoom_start=10) 
 
 fg = folium.FeatureGroup(name="Mi Mapa")
-
 
 
 folium.TileLayer(
@@ -27,8 +28,9 @@ folium.TileLayer(
 
 
 
-for lt, ln in zip(lat, lon):
-    fg.add_child(folium.Marker(location=[lt, ln], popup='marker', icon=folium.Icon(color="blue")))
+for lt, ln, el in zip(lat, lon, elev):
+    fg.add_child(folium.Marker(location=[lt, ln], popup= folium.Popup(str(el)+"m", parse_html=True), 
+                               icon=folium.Icon(color="blue")))
 
 
 
