@@ -4,6 +4,9 @@ import os
 
 import pandas 
 
+import json
+
+
 data = pandas.read_csv("c:/Users/janov/Desktop/DataEngineer-RoadMap/Python/08-App-Mapping/Files/Volcanoes.txt")
 
 lat = list(data["LAT"])
@@ -25,7 +28,7 @@ def color_producer(elevation):
 # Crear un mapa centrado en las coordenadas proporcionadas
 mapa = folium.Map(location=[38.58, -99.09], zoom_start=10) 
 
-fg = folium.FeatureGroup(name="Mi Mapa")
+fgv = folium.FeatureGroup(name="Volcanoes")
 
 
 folium.TileLayer(
@@ -38,7 +41,7 @@ folium.TileLayer(
 
 
 for lt, ln, el in zip(lat, lon, elev):
-    fg.add_child(folium.CircleMarker(
+    fgv.add_child(folium.CircleMarker(
         location=[lt, ln],
         radius=7,
         popup=folium.Popup(str(el) + "m", parse_html=True),
@@ -49,9 +52,30 @@ for lt, ln, el in zip(lat, lon, elev):
     ))
 
 
-mapa.add_child(fg)
+fgp = folium.FeatureGroup(name="Population")
 
 
+with open("c:/Users/janov/Desktop/DataEngineer-RoadMap/Python/08-App-Mapping/Files/world.json", 'r', encoding='utf-8-sig') as file:
+    geo_data = json.load(file)
+
+# Filter out features with missing geometries
+geo_data['features'] = [feature for feature in geo_data['features'] if feature.get('geometry') is not None]
+
+fgp.add_child(folium.GeoJson(
+    data=geo_data, style_function=lambda x: {
+        'fillColor': 'green' if x['properties']['POP2005'] < 10000000 else 
+                     'orange' if 10000000 <= x['properties']['POP2005'] < 20000000 else 
+                     'red'}
+))
+
+
+
+
+mapa.add_child(fgv)
+
+mapa.add_child(fgp)
+
+mapa.add_child(folium.LayerControl())
 
 
 
