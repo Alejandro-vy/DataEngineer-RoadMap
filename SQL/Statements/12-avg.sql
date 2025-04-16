@@ -1,0 +1,1 @@
+SELECT AVG(ano_creacion) FROM marcas; # Trae el promedio de los años de creación

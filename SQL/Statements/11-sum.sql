@@ -1,0 +1,1 @@
+SELECT SUM(ano_creacion) FROM marcas; # Trae la suma de todos los años de creación

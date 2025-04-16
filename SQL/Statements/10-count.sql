@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM marcas; # Trae la cantidad total de registros de la tabla marcas
