@@ -1,0 +1,1 @@
+SELECT * FROM marcas WHERE nombre_marca IN ('Treino', 'Stodak'); # Trae los registros donde el campo nombre_marca es igual a Treino o Stodak
